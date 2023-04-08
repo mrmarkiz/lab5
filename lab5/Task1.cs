@@ -359,33 +359,7 @@ namespace lab5
         }
         public static bool operator !=(Worker worker1, Worker worker2)
         {
-            if (worker1.GetInitials() != worker2.GetInitials())
-                return true;
-
-            if (worker1.GetBirthday().Length != worker2.GetBirthday().Length)
-                return true;
-            for (int i = 0; i < worker1.GetBirthday().Length; i++)
-                if (worker1.GetBirthday()[i] != worker2.GetBirthday()[i])
-                    return true;
-
-            if (worker1.GetTelephone() != worker2.GetTelephone())
-                return true;
-
-            if (worker1.GetEmail() != worker2.GetEmail())
-                return true;
-
-            if (worker1.GetPosition() != worker2.GetPosition())
-                return true;
-
-            if (worker1.GetSalary() != worker2.GetSalary())
-                return true;
-
-            if (worker1.GetDuties().Length != worker2.GetDuties().Length)
-                return true;
-            for (int i = 0; i < worker1.GetDuties().Length; i++)
-                if (worker1.GetDuties()[i] != worker2.GetDuties()[i])
-                    return true;
-            return false;
+            return worker1.GetSalary() != worker2.GetSalary();
         }
 
         public override bool Equals(object? obj)
