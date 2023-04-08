@@ -366,7 +366,37 @@ namespace lab5
         {
             if (obj == null || !(obj.GetType().Equals(GetType())))
                 return false;
-            return !(this != (Worker)obj);
+            Worker worker2 = (Worker)obj;
+
+            if (this.GetInitials() != worker2.GetInitials())
+                return false;
+
+            if (this.GetBirthday().Length != worker2.GetBirthday().Length)
+                return false;
+            for (int i = 0; i < this.GetBirthday().Length; i++)
+                if (this.GetBirthday()[i] != worker2.GetBirthday()[i])
+                    return false;
+
+            if (this.GetTelephone() != worker2.GetTelephone())
+                return false;
+
+            if (this.GetEmail() != worker2.GetEmail())
+                return false;
+
+            if (this.GetPosition() != worker2.GetPosition())
+                return false;
+
+            if (this.GetSalary() != worker2.GetSalary())
+                return false;
+
+            if (this.GetDuties().Length != worker2.GetDuties().Length)
+                return false;
+            for (int i = 0; i < this.GetDuties().Length; i++)
+                if (this.GetDuties()[i] != worker2.GetDuties()[i])
+                    return false;
+            return true;
         }
+
+
     }
 }
